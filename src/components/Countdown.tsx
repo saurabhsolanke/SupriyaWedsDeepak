@@ -31,7 +31,7 @@ const Countdown: React.FC = () => {
   }, []);
 
   return (
-    <div className="bg-bg-light text-primary py-10 px-4 md:py-16 md:px-8 text-center border-b border-gray-200">
+    <div className="bg-bg-light text-primary py-10 px-4 md:py-16 md:px-8 text-center border-b border-gray-200" data-aos="fade-up">
       <h2 className="font-playfair text-2xl md:text-[2.5rem] mb-8 italic">
         Countdown Until The Big Day!
       </h2>

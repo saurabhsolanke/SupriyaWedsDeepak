@@ -13,7 +13,7 @@ const Hero: React.FC<HeroProps> = ({ backgroundImage }) => {
       {/* Overlay for better text readability */}
       <div className="absolute inset-0 bg-black/20"></div>
       
-      <div className="relative z-10 text-center text-white px-4">
+      <div className="relative z-10 text-center text-white px-4" data-aos="zoom-out" data-aos-delay="500">
         <h1 className="font-playfair text-4xl md:text-6xl font-normal mb-4 drop-shadow-md text-white">
           Deepak <span className="italic font-playfair">&</span> Supriya
         </h1>

@@ -8,7 +8,7 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className="absolute top-0 left-0 w-full z-10 bg-transparent px-6 py-4 md:px-8 md:py-6 flex justify-between items-center text-white">
+    <nav className="absolute top-0 left-0 w-full z-10 bg-transparent px-6 py-4 md:px-8 md:py-6 flex justify-between items-center text-white" data-aos="fade-down" data-aos-duration="1500">
       <div className="font-playfair text-2xl font-semibold">
         D & S
       </div>

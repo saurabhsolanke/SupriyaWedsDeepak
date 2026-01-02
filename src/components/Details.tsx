@@ -20,7 +20,7 @@ const Details: React.FC = () => {
     <div className="bg-primary text-white text-center py-10 px-4 md:py-20 md:px-8">
       
       {/* Accommodation Section */}
-      <div id="accommodation">
+      <div id="accommodation" data-aos="fade-up">
         <h2 className="font-playfair text-2xl md:text-4xl mb-8 font-normal uppercase tracking-widest">Accommodation</h2>
         <p className="max-w-[600px] mx-auto mb-12 md:mb-16 opacity-90 font-montserrat text-xs md:text-sm leading-relaxed">
           For your comfort, we recommend the following hotel. Click to view more details.
@@ -43,7 +43,7 @@ const Details: React.FC = () => {
        <div id="travel" className="flex justify-center gap-8 flex-wrap mb-16 md:mb-24">
           
           {/* Location */}
-          <div className="border border-white/30 p-8 md:p-12 max-w-[400px] w-full flex flex-col items-center">
+          <div className="border border-white/30 p-8 md:p-12 max-w-[400px] w-full flex flex-col items-center" data-aos="fade-up" data-aos-delay="100">
             <h3 className="uppercase tracking-[2px] mb-6 md:mb-8 font-montserrat text-sm md:text-base">Location</h3>
              <ul className="list-none p-0 text-center leading-loose font-montserrat text-xs md:text-sm">
               <li>Venkatesh Mangal Karyalay, Majalgaon</li>
@@ -52,7 +52,7 @@ const Details: React.FC = () => {
           </div>
 
           {/* Transportation */}
-          <div className="border border-white/30 p-8 md:p-12 max-w-[400px] w-full flex flex-col items-center">
+          <div className="border border-white/30 p-8 md:p-12 max-w-[400px] w-full flex flex-col items-center" data-aos="fade-up" data-aos-delay="200">
              <h3 className="uppercase tracking-[2px] mb-6 md:mb-8 font-montserrat text-sm md:text-base">Transportation</h3>
              <p className="text-center leading-loose font-montserrat text-xs md:text-sm">
                Please contact us if you need assistance with transportation arrangements.
@@ -61,7 +61,7 @@ const Details: React.FC = () => {
        </div>
 
        {/* FAQ Section */}
-       <div id="faqs">
+       <div id="faqs" data-aos="fade-up">
           <h2 className="font-playfair text-2xl md:text-4xl mb-12 md:mb-16 font-normal uppercase tracking-widest">
             Frequently Asked<br/>Questions
           </h2>

@@ -6,7 +6,7 @@ const RSVPFooter: React.FC = () => {
     <div id="rsvp" className="relative bg-bg-light">
       
       {/* Contact Section */}
-      <div className="flex flex-wrap justify-center items-center py-10 px-4 gap-8 md:py-20 md:px-8 md:gap-16">
+      <div className="flex flex-wrap justify-center items-center py-10 px-4 gap-8 md:py-20 md:px-8 md:gap-16" data-aos="fade-up">
          {/* Contact Info */}
          <div className="flex-1 min-w-[300px] max-w-[500px]">
             <h2 className="font-playfair text-3xl md:text-5xl text-primary mb-8 md:mb-12 italic font-normal">
@@ -32,13 +32,12 @@ const RSVPFooter: React.FC = () => {
       </div>
 
       {/* RSVP Envelope Section */}
-      <div className="py-10 px-4 md:py-16 md:px-8 text-center bg-[#e8e8e8] flex justify-center">
-        <div className="max-w-[600px] w-full bg-white p-6 md:p-12 shadow-2xl relative">
-           {/* Envelope Flap Effect visual only */}
+      {/* <div className="py-10 px-4 md:py-16 md:px-8 text-center bg-[#e8e8e8] flex justify-center">
+        <div className="max-w-[600px] w-full bg-white p-6 md:p-12 shadow-2xl relative" data-aos="zoom-in">
+         
            <h2 className="font-playfair text-3xl md:text-5xl text-primary mb-4 italic font-normal">
              Kindly Respond
            </h2>
-           {/* Gold Seal decoration */}
            <div className="w-[50px] h-[50px] md:w-[60px] md:h-[60px] bg-accent rounded-full mx-auto mb-8 flex items-center justify-center text-white text-xl md:text-2xl">✉️</div>
 
            <p className="uppercase tracking-[2px] mb-8 text-[0.6rem] md:text-xs font-montserrat leading-relaxed">
@@ -49,7 +48,7 @@ const RSVPFooter: React.FC = () => {
              RSVP HERE
            </button>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
