@@ -156,7 +156,6 @@ const LandingPage: React.FC = () => {
                         <button
                             onClick={() => {
                                 setShowSecurity(false);
-                                setError('');
                                 setAnswer('');
                             }}
                             className="absolute top-4 right-4 text-gray-300 hover:text-gray-500 transition-colors"
@@ -169,7 +168,7 @@ const LandingPage: React.FC = () => {
                             <p className="text-gray-500 text-xs uppercase tracking-widest">Security Check</p>
                         </div>
 
-                        <form onSubmit={handleSecurityCheck} className="flex flex-col gap-5">
+                        {/* <form onSubmit={handleSecurityCheck} className="flex flex-col gap-5">
                             <div>
                                 <label className="block text-sm font-semibold text-gray-700 mb-2">
                                     What is the hashtag?
@@ -185,7 +184,6 @@ const LandingPage: React.FC = () => {
                                     placeholder="Answer"
                                     autoFocus
                                 />
-                                {error && <p className="text-red-500 text-xs mt-2 text-center animate-pulse">{error}</p>}
                             </div>
 
                             <button
@@ -195,7 +193,7 @@ const LandingPage: React.FC = () => {
                             >
                                 Enter Wedding Site
                             </button>
-                        </form>
+                        </form> */}
                     </div>
                 </div>
             )}
