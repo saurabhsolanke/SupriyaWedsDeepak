@@ -57,14 +57,14 @@ const LandingPage: React.FC = () => {
                     Open in Google Maps
                 </a>
 
-                <div className="mt-8">
+                {/* <div className="mt-8">
                     <button
                         onClick={() => setShowSecurity(true)}
                         className="text-pink-600 underline font-montserrat hover:text-pink-800 transition-colors"
                     >
                         View Full Wedding Site
                     </button>
-                </div>
+                </div> */}
             </div>
 
             {/* Security Modal */}
