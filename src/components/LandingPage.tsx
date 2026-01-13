@@ -8,16 +8,12 @@ const LandingPage: React.FC = () => {
     const [activeTab, setActiveTab] = useState<'location' | 'itinerary' | 'accommodation'>('location');
 
     return (
-        <div className="w-full h-screen flex flex-col overflow-hidden relative bg-white font-montserrat">
+        <div className="w-full h-[97vh] md:h-screen flex flex-col overflow-hidden relative bg-white font-montserrat">
             {/* Top Navbar */}
-            <nav className="w-full py-3 px-6 flex justify-between items-center shadow-md bg-[#4a2026] shrink-0 z-20 h-[60px]">
+            <nav className="w-full py-3 px-6 flex justify-center items-center shadow-md bg-[#4a2026] shrink-0 z-20 h-[60px]">
                 <div className="font-playfair text-xl font-semibold text-gray-100 tracking-wider">
                     Deepak & Supriya
                 </div>
-                {/* <button onClick={() => setShowSecurity(true)}
-                    className="text-gray-100 text-xs uppercase tracking-widest hover:text-pink-200 transition-colors border border-white/20 px-3 py-1 rounded-sm">
-                    Enter Site
-                </button> */}
             </nav>
 
             {/* Main Content Area */}
@@ -133,7 +129,7 @@ const LandingPage: React.FC = () => {
                     onClick={() => setActiveTab('itinerary')}
                     className={`flex flex-col items-center justify-center w-full h-full space-y-1 ${activeTab === 'itinerary' ? 'text-pink-600' : 'text-gray-400'}`}
                 >
-                    <span className="text-xl">📅</span>
+                    <span className="text-xl">🗓️</span>
                     <span className="text-[10px] uppercase tracking-wider font-semibold">Itinerary</span>
                 </button>
                 <div className="w-[1px] h-8 bg-gray-100"></div>
