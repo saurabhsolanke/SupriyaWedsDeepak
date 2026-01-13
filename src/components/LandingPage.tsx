@@ -21,56 +21,76 @@ const LandingPage: React.FC = () => {
     };
 
     return (
-        <div className="w-full relative">
-            <nav className="w-full py-4 px-6 flex justify-center items-center shadow-sm bg-[#4a2026]">
-                <div className="font-playfair text-2xl font-semibold text-gray-100 tracking-wider">
-                    D & S
+        <div className="w-full h-screen flex flex-col overflow-hidden relative bg-white">
+            <nav className="w-full py-3 px-6 flex justify-center items-center shadow-sm bg-[#4a2026] shrink-0 z-20 h-[60px]">
+                <div className="font-playfair text-xl font-semibold text-gray-100 tracking-wider">
+                    Deepak & Supriya
                 </div>
             </nav>
 
-            <div className={`py-10 px-4 flex flex-col items-center justify-center bg-white text-center transition-all ${showSecurity ? 'blur-sm brightness-50' : ''}`}>
-                <h2 className="text-3xl font-playfair mb-6 text-gray-800">Wedding Location</h2>
-                <p className="font-montserrat text-gray-600 mb-8 max-w-md">
-                    We can't wait to see you there!
-                    <br />
-                    <strong>Venkatesh Mangal Karyalaya, Majalgaon</strong>
-                </p>
+            <div className="flex-1 flex flex-col md:flex-row w-full overflow-hidden">
+                <div className="flex-1 flex flex-col items-center justify-center p-4 md:p-8 relative transition-all">
+                    <div className="text-center mb-2 md:mb-4">
+                        <h2 className="text-2xl md:text-3xl font-playfair mb-1 md:mb-2 text-gray-800">Wedding Location</h2>
+                        <p className="font-montserrat text-gray-600 text-xs md:text-sm max-w-sm mx-auto">
+                            <strong>Venkatesh Mangal Karyalaya, Majalgaon</strong>
+                        </p>
+                    </div>
 
-                <div className="w-full max-w-4xl h-64 md:h-96 mb-8 rounded-lg overflow-hidden shadow-lg">
-                    <iframe
-                        src={mapEmbedUrl}
-                        width="100%"
-                        height="100%"
-                        style={{ border: 0 }}
-                        allowFullScreen
-                        loading="lazy"
-                        referrerPolicy="no-referrer-when-downgrade">
-                    </iframe>
+                    <div className="w-full max-w-2xl flex-1 min-h-0 rounded-lg overflow-hidden shadow-lg mb-4 border border-gray-100 relative">
+                        <iframe
+                            src={mapEmbedUrl}
+                            width="100%"
+                            height="100%"
+                            style={{ border: 0 }}
+                            allowFullScreen
+                            loading="lazy"
+                            referrerPolicy="no-referrer-when-downgrade"
+                            className="absolute inset-0"
+                        >
+                        </iframe>
+                    </div>
+
+                    <a
+                        href={mapLocation}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="shrink-0 inline-block bg-pink-600 text-white font-montserrat px-6 py-2 md:py-3 rounded-full text-sm md:text-base shadow-lg hover:bg-pink-700 transition-colors"
+                    >
+                        Open Maps
+                    </a>
                 </div>
 
-                <a
-                    href={mapLocation}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block bg-pink-600 text-white font-montserrat px-8 py-3 rounded-full text-lg shadow-lg hover:bg-pink-700 transition-colors transform hover:scale-105"
-                >
-                    Open in Google Maps
-                </a>
+                {/* Right/Bottom: Itinerary */}
+                <div className="flex-1 bg-pink-50/50 flex flex-col justify-center p-4 md:p-8 overflow-y-auto">
+                    <div className="w-full max-w-md mx-auto" data-aos="fade-left">
+                        <h2 className="text-[#4a2026] font-playfair text-2xl md:text-4xl mb-6 md:mb-8 text-center italic">
+                            Itinerary
+                        </h2>
 
-                {/* <div className="mt-8">
-                    <button
-                        onClick={() => setShowSecurity(true)}
-                        className="text-pink-600 underline font-montserrat hover:text-pink-800 transition-colors"
-                    >
-                        View Full Wedding Site
-                    </button>
-                </div> */}
+                        <div className="w-full">
+                            {[
+                                { time: '2nd Feb, 4:00 PM', event: 'Engagement' },
+                                { time: '2nd Feb, 6:00 PM', event: 'Haldi' },
+                                { time: '3rd Feb, 12:30 PM', event: 'Vidhi' },
+                                { time: '3rd Feb, 6:22 PM', event: 'Varmala' },
+                            ].map((item, index) => (
+                                <div key={index} className="flex mb-4 md:mb-6 items-start last:mb-0">
+                                    <span className="w-[90px] md:w-[100px] font-semibold text-gray-800 text-xs md:text-sm pt-1 text-right pr-4">{item.time}</span>
+                                    <span className="flex-1 uppercase tracking-[1px] text-xs md:text-sm border-l-2 border-pink-700 pl-4 text-gray-700 py-1">
+                                        {item.event}
+                                    </span>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
             </div>
 
             {/* Security Modal */}
             {showSecurity && (
-                <div className="fixed inset-0 flex items-center justify-center z-50 p-4">
-                    <div className="bg-white rounded-lg shadow-2xl p-8 max-w-md w-full animate-fade-in relative">
+                <div className="fixed inset-0 flex items-center justify-center z-50 p-4 bg-black/60 backdrop-blur-sm">
+                    <div className="bg-white rounded-lg shadow-2xl p-6 md:p-8 max-w-md w-full animate-fade-in relative mx-4">
                         <button
                             onClick={() => {
                                 setShowSecurity(false);
@@ -82,9 +102,9 @@ const LandingPage: React.FC = () => {
                             ✕
                         </button>
 
-                        <h3 className="text-2xl font-playfair text-gray-800 mb-4">Security Question</h3>
+                        <h3 className="text-2xl font-playfair text-gray-800 mb-4">Security Check</h3>
                         <p className="text-gray-600 mb-6 font-montserrat text-sm">
-                            To view the full wedding site, please verify you know the couple.
+                            Please verify you know the couple to view the site.
                         </p>
 
                         <form onSubmit={handleSecurityCheck} className="flex flex-col gap-4">
@@ -100,7 +120,7 @@ const LandingPage: React.FC = () => {
                                         setError('');
                                     }}
                                     className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-pink-500 focus:border-transparent outline-none transition-all"
-                                    placeholder="Enter groom's first name"
+                                    placeholder="Answer"
                                     autoFocus
                                 />
                                 {error && <p className="text-red-500 text-xs mt-2 font-montserrat">{error}</p>}
