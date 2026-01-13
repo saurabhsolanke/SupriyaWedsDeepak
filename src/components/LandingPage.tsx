@@ -1,13 +1,10 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 
 const LandingPage: React.FC = () => {
     const mapLocation = "https://maps.app.goo.gl/NQssFQf4eNBCKpK88";
     const mapEmbedUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3768.459637652443!2d76.17942287568988!3d19.17511658205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdab1da0ad94b95%3A0x194ee811537b894b!2sVenkatesh%20Mangal%20Karyalaya%20and%20Lawns!5e0!3m2!1sen!2sin!4v1768290144491!5m2!1sen!2sin";
 
-    const navigate = useNavigate();
     const [showSecurity, setShowSecurity] = useState(false);
-    const [answer, setAnswer] = useState('');
     const [activeTab, setActiveTab] = useState<'location' | 'itinerary' | 'accommodation'>('location');
 
     return (
@@ -153,14 +150,8 @@ const LandingPage: React.FC = () => {
             {showSecurity && (
                 <div className="fixed inset-0 flex items-center justify-center z-50 p-4 bg-[#4a2026]/80 backdrop-blur-sm">
                     <div className="bg-white rounded-xl shadow-2xl p-6 md:p-8 max-w-sm w-full animate-fade-in relative mx-4">
-                        <button
-                            onClick={() => {
-                                setShowSecurity(false);
-                                setAnswer('');
-                            }}
-                            className="absolute top-4 right-4 text-gray-300 hover:text-gray-500 transition-colors"
-                        >
-                            ✕
+                        <button onClick={() => { setShowSecurity(false); }}
+                            className="absolute top-4 right-4 text-gray-300 hover:text-gray-500 transition-colors">✕
                         </button>
 
                         <div className="text-center mb-6">
